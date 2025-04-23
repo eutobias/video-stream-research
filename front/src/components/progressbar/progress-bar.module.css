@@ -1,0 +1,3 @@
+.animateProgress::-webkit-progress-value {
+  transition: width 0.7s;
+}
