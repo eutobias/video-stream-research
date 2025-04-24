@@ -10,17 +10,17 @@ const app = express();
 app.use(cors());
 const port = 3001;
 
-app.post("/upload", upload.single("file"), async (req, res) => {
+app.post("/upload", upload.single("file"), (req, res) => {
   const { file, body } = req;
 
   const chunkName = path.join(
     "uploads/",
     generateChunkName(file?.originalname, body?.index)
   );
-  await fs.rename(file?.path, chunkName);
+  fs.renameSync(file?.path, chunkName);
 
   if (+body?.index + 1 === +body?.total) {
-    await mergerChunk(file);
+    mergerChunk(file);
   }
 
   res.json({ file });
