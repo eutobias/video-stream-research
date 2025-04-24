@@ -36,7 +36,7 @@ app.get("/watch/:video", (req, res) => {
   const fileInfo = fs.statSync(fileName);
   if (!fileInfo) res.status(400).send("error");
 
-  const videoSize = fs.statSync(fileName).size;
+  const videoSize = fileInfo.size;
 
   const chunkSize = 10 ** 6;
   const start = Number(range.replace(/\D/g, ""));
