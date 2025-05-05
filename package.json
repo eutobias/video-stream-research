@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "pnpm recursive run dev"
+    "dev": "pnpm recursive run dev",
+    "dev-docker": "docker-compose -f docker-compose.dev.yml up --build"
   },
   "keywords": [],
   "author": "",

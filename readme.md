@@ -12,6 +12,11 @@ pnpm install
 pnpm dev
 ```
 
+### Docker usage
+```
+docker-compose -f docker-compose.dev.yml up --build
+```
+
 ### Access
 
 - Front: [http://localhost:3000](http://localhost:3000/)
