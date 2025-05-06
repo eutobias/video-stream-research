@@ -3,12 +3,12 @@ version: '3.8'
 services:
   frontend:
     build:
-      context: ./front
-      dockerfile: Dockerfile.dev
+      context: ./front/react
+      dockerfile: Dockerfile
     ports:
-      - "5173:5173"
+      - "3000:3000"
     volumes:
-      - ./front:/app
+      - ./front/react:/app
       - /app/node_modules
     environment:
       - VITE_API_URL=http://localhost:3001
@@ -17,14 +17,14 @@ services:
 
   backend:
     build:
-      context: ./back
-      dockerfile: Dockerfile.dev
+      context: ./back/nodejs
+      dockerfile: Dockerfile
     ports:
       - "3001:3001"
     volumes:
-      - ./back:/app
+      - ./back/nodejs:/app
       - /app/node_modules
-      - ./back/uploads:/app/uploads
+      - ./back/nodejs/uploads:/app/uploads
 
 volumes:
   uploads:
