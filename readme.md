@@ -6,11 +6,8 @@ This is a pnpm monorepo, only for development purposes, theres no building or an
 
 Fell free to use and study this code.
 
-### Usage
-```
-pnpm install
-pnpm dev
-```
+To run this project you need to have docker installed.
+
 ### To launch NodeJS API with React Frontend
 ```
 docker-compose -f docker-compose.node-react.yml up
