@@ -11,10 +11,9 @@ Fell free to use and study this code.
 pnpm install
 pnpm dev
 ```
-
-### Docker usage
+### To launch NodeJS API with React Frontend
 ```
-docker-compose -f docker-compose.dev.yml up --build
+docker-compose -f docker-compose.node-react.yml up
 ```
 
 ### Access
