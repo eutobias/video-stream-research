@@ -57,7 +57,7 @@ app.get("/watch/:video", (req, res) => {
 
 app.get("/videos", (req, res) => {
   const videos = fs.readdirSync("./uploads/").map((item) => {
-    return item
+    return item;
   });
 
   res.json(videos);
