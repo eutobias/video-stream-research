@@ -1,5 +1,7 @@
 {
-    "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true,
-    "python.formatting.provider": "autopep8"
+    "python.analysis.extraPaths": [
+        "./back/python/lib"
+    ],
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.autoImportCompletions": true
 }

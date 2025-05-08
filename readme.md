@@ -10,7 +10,12 @@ To run this project you need to have docker installed.
 
 ### To launch NodeJS API with React Frontend
 ```
-docker-compose -f docker-compose.node-react.yml up
+pnpm dev-node
+```
+
+### To launch Python (Flask) API with React Frontend
+```
+pnpm dev-python
 ```
 
 ### Access

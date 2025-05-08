@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  frontend_node:
+  frontend_python:
     build:
       context: ./front/react
       dockerfile: Dockerfile
@@ -13,18 +13,17 @@ services:
     environment:
       - VITE_API_URL=http://localhost:3001
     depends_on:
-      - backend
+      - backend_python
 
-  backend_node:
+  backend_python:
     build:
-      context: ./back/nodejs
+      context: ./back/python
       dockerfile: Dockerfile
     ports:
       - "3001:3001"
     volumes:
-      - ./back/nodejs:/app
-      - /app/node_modules
-      - ./back/nodejs/uploads:/app/uploads
+      - ./back/python:/app
+      - ./back/python/uploads:/app/uploads
 
 volumes:
-  uploads:
+  uploads_python:

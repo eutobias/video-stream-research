@@ -3,12 +3,13 @@ lockfileVersion: '9.0'
 settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
+  injectWorkspacePackages: true
 
 importers:
 
   .: {}
 
-  back:
+  back/nodejs:
     dependencies:
       cors:
         specifier: ^2.8.5
@@ -39,7 +40,7 @@ importers:
         specifier: ^5.8.3
         version: 5.8.3
 
-  front:
+  front/react:
     dependencies:
       react:
         specifier: ^19.0.0

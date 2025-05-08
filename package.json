@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "pnpm recursive run dev",
-    "dev-docker": "docker-compose up"
+    "dev-node": "docker-compose -f docker-compose.node-react.yml up",
+    "dev-python": "docker-compose -f docker-compose.python-react.yml up"
   },
   "keywords": [],
   "author": "",
